@@ -86,3 +86,10 @@ body{
     font-weight:300;
 
 }
+@media (min-width:466px){
+    .menu-container{
+        grid-template-columns: 1fr 1fr;
+        gap:20px;
+        padding: 20px 30px;
+    }
+}
