@@ -1,5 +1,5 @@
 :root{
-    --bgColor:#A1A2A6;
+    --bgColor:#B4BEC9;
     --fontMain:#0D0D0D;
     --fontPrimary:#F2AE30;
     --extra1:#024959;
@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 .header-main h2{
     font-size: 2.4rem;
@@ -32,28 +33,56 @@ body{
     letter-spacing: 0.3rem;
 }
 .underline{
-    width: 80px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background-color: var(--extra1);
     border-radius: 3px;
-    margin-top: 5px;
+    margin-top: 10px;
+    opacity: 50%;
 }
+
 .menu-container{
-    width: 90%;
-    margin:0 auto;
+    width: 100%;
+    padding: 20px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
+    margin: 0 auto;
 }
 .menu-item{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
+    grid-template-columns: 1fr;
+    gap:10px;
     width: 100%;
-    height: 300px;
+    min-height: 200px;
+    margin:10px 0;
 }
 .item-photo{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
+    border: 2px solid var(--extra1);
+    border-radius: 20px;
+}
+.item-header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--extra2);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.item-header h2{
+    font-size:1.8rem;
+    font-weight: 700;
+}
+.item-header p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.item-description{
+    font-size:1.4rem;
+    font-weight:300;
+
 }
