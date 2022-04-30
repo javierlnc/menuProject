@@ -65,22 +65,23 @@ const menu =[
     },
 ]
 const menuContainer = document.getElementById("menu-container");
+function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map((item) => {
+       return `<article class="menu-item">
+       <img src="${item.img}" alt="${item.title}" class="item-photo">
+       <div class="item-info">
+           <header class="item-header">
+               <h2>${item.title}</h2>
+               <p>$ ${item.price}</p>
+           </header>
+           <p class="item-description">${item.description}
+           </p>
+       </div>
+   </article>`
+   })
+   displayMenu = displayMenu.join('')
+   menuContainer.innerHTML = displayMenu; 
+}
 window.addEventListener('DOMContentLoaded',function() {
-    console.log('Shake and bate');
-    let displayMenu = menu.map((item) => {
-        return `<article class="menu-item">
-        <img src="${item.img}" alt="${item.title}" class="item-photo">
-        <div class="item-info">
-            <header class="item-header">
-                <h2>${item.title}</h2>
-                <p>$ ${item.price}</p>
-            </header>
-            <p class="item-description">${item.description}
-            </p>
-        </div>
-    </article>`
-    })
-    displayMenu = displayMenu.join('')
-    menuContainer.innerHTML = displayMenu;
-    
+    displayMenuItems(menu); 
 })
