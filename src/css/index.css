@@ -40,6 +40,20 @@ body{
     margin-top: 10px;
     opacity: 50%;
 }
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.btn-container .btn{
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    text-align: center;
+    background:none;
+    cursor: pointer;
+    border: 1px solid var(--extra2);
+    font-size: 1.2rem;
+}
 
 .menu-container{
     width: 100%;
