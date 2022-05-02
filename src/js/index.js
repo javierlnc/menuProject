@@ -65,6 +65,7 @@ const menu =[
     },
 ]
 const menuContainer = document.getElementById("menu-container");
+const filterButton = document.querySelectorAll("#filter-btn")
 function displayMenuItems(menuItems) {
     let displayMenu = menuItems.map((item) => {
        return `<article class="menu-item">
@@ -82,6 +83,22 @@ function displayMenuItems(menuItems) {
    displayMenu = displayMenu.join('')
    menuContainer.innerHTML = displayMenu; 
 }
+filterButton.forEach(function (button) {
+    button.addEventListener("click",e => {
+        const category = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter(menuItem => {
+            if (category == menuItem.category) {
+                return menuItem;                
+            }
+        });
+        if(category === "all"){
+            displayMenuItems(menu)
+        }else{
+            displayMenuItems(menuCategory)
+        }
+})
+    
+});
 window.addEventListener('DOMContentLoaded',function() {
     displayMenuItems(menu); 
 })
